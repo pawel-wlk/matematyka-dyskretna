@@ -3,7 +3,6 @@ public class Permutation {
     //initialize needed variables
     int size = args.length;
     int[] vector = new int[size];
-    int max_num = size - 1;
 
     // parse command line arguments
     for (int i=0; i<size; i++) {
@@ -24,7 +23,7 @@ public class Permutation {
 
     // calculate the permutation
     for (int i=0; i<size; i++) {
-      result[i] = max_num - vector[i];
+      result[i] = size - vector[i];
 
       for (int j=0; j<i; j++) {
         if (result[j] <= result[i]) {
@@ -35,7 +34,7 @@ public class Permutation {
 
     // check for errors
     for (int i=0; i<size; i++) {
-      if (result[i]+1==0 || result[i]>max_num) {
+      if (result[i]==0 || result[i]>size) {
         System.out.println("There might be something wrong with your vector ");
         return;
       }
@@ -43,7 +42,7 @@ public class Permutation {
 
     // print the result
     for (int i=0; i<size; i++) {
-      System.out.println((i+1) + " - " + (result[i]+1));
+      System.out.println((i+1) + " - " + (result[i]));
     }
   }
 }
