@@ -1,0 +1,6 @@
+Program przyjmuje jako argumenty ciąg liczb naturalnych będących kolejnymi współrzędnymi wektora inwersji permutacji, następnie odtwarza
+tę permutację i wypisuje ją na ekran.
+
+ENG:
+Program takes as arguments the sequence of natural numbers which are following cooridnates of iversion vector of some permutation, guesses that
+permutation and prints it.
